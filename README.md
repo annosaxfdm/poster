@@ -16,10 +16,16 @@ If you are a LaTeX beginner or just prefer working in a web editor, you can use 
 * Add literature to `poster.bib`
 
 ## Compile
-Compile the LaTeX file to PDF using `pdflatex` and `bibtex`.
+Compile the LaTeX file to PDF:
+
+    pdflatex poster.tex
+    bibtex poster
+    pdflatex poster.tex
+
+If you don't have any literature references, `pdflatex poster.tex` is enough.
 If you have `latexmk` installed, you can do it in one command using `latexmk -pdf poster.tex` or under Linux just execute the `compile` script.
 
 ## Feedback
-If you need help, send an email to [Konrad](mailto:konrad dot hoeffner at imise dot uni-leipzig.de).
+If you need help, contact Konrad.
 If you encounter bugs or have a proposal to improve the template, please [create an issue](https://github.com/IMISE/imise-poster/issues/new).
 

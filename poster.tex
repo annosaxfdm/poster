@@ -1,11 +1,15 @@
 \PassOptionsToPackage{table}{xcolor}
 \documentclass[portrait,final,a0paper,fontscale=0.320]{imiseposter}
+\usepackage[T1]{fontenc}
 \usepackage[utf8]{inputenc}
 \usepackage[english]{babel}% change to ngerman for a German poster
-\usepackage[T1]{fontenc}
-
+% Using biblatex and biber. It's more modern but takes more than twice as long to compile in my case. ****
+% If you use biblatex, you need to comment and uncomment the marked statements in the references as well.
+%\usepackage{csquotes}
+%\usepackage[style=numeric,backend=biber]{biblatex}
+%\addbibresource{poster.bib}
+%*********************************************************************************************************
 \usepackage{graphicx}
-
 \usepackage{url}% do not use hyperref as its links are displaced with baposter because of the font scale 
 
 \usepackage{blindtext}% remove for production
@@ -54,10 +58,14 @@ Some text~\cite{bb} and some more text~\cite{ob} and even more text~\cite{he}.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{posterbox}[name=references,column=0,below=methods]{References}
     \small
-    \bibliographystyle{abbrv}
     \begingroup
     \renewcommand{\section}[2]{}%suppress heading
+    % using bibtex ***********
+    \bibliographystyle{abbrv}
     \bibliography{poster}
+    % using biblatex *********
+    %\printbibliography
+    %*************************
     \endgroup
     \vspace{0.3em}
     Myproject is supported under the DFG grant numbers 1234/5-6 and 6543/2-1.
