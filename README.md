@@ -7,7 +7,7 @@ Fork this repository into your own GitHub account or [download](https://github.c
 In any case, I recommend you to put your poster into version control.
 
 ## Online Editor
-If you are a LaTeX beginner or just prefer working in a web editor, you can use [Overleaf](https://www.overleaf.com/).
+If you are a LaTeX beginner or just prefer working in a web editor, you can copy and edit this template on [Overleaf](https://www.overleaf.com/read/bxbbygxjhpdx).
 
 ## Develop
 * If your poster is in German language, change `\usepackage[english]{babel}` to `\usepackage[ngerman]{babel}` in `poster.tex`
@@ -26,6 +26,5 @@ If you don't have any literature references, `pdflatex poster.tex` is enough.
 If you have `latexmk` installed, you can do it in one command using `latexmk -pdf poster.tex` or under Linux just execute the `compile` script.
 
 ## Feedback
-If you need help, contact Konrad.
 If you encounter bugs or have a proposal to improve the template, please [create an issue](https://github.com/IMISE/imise-poster/issues/new).
 
