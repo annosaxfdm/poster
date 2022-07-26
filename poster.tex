@@ -71,13 +71,18 @@ Some text~\cite{bb} and some more text~\cite{ob} and even more text~\cite{he}.
     \vspace{0.3em}
     Myproject is supported under the DFG grant numbers 1234/5-6 and 6543/2-1.
   \end{posterbox}
+%%%%%%%%%%%%%%% Anno Logo
+ \node [anchor=south east, inner sep=1pt,xshift=-27em] at (current page.south east)
+ {\includegraphics[height=0.03\textheight]{img/anno-logo.pdf}
+ };
 %%%%%%%%%%%%%%% IMISE Logo
- \node [anchor=south east, inner sep=1pt,xshift=-26em] at (current page.south east)
+ \node [anchor=south east, inner sep=1pt,xshift=-10em] at (current page.south east)
  {\includegraphics[height=0.03\textheight]{img/imise-logo.pdf}
  };
 %%%%%%%%%%%%%%% DFG Logo, remove or replace if your project is funded by a different organization 
- \node [anchor=south east, inner sep=1pt,xshift=-2.5em] at (current page.south east) % for unknown reasons the xshift is necessary
- {\includegraphics[height=0.03\textheight]{img/dfg-logo.pdf}
+ \node [anchor=south east, inner sep=1pt,xshift=-3.5em] at (current page.south east) % for unknown reasons the xshift is necessary
+ %{\includegraphics[height=0.03\textheight]{img/dfg-logo.pdf}
+ {\includegraphics[height=0.08\textheight]{img/sachsen-signet.pdf}
  };
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \end{poster}
