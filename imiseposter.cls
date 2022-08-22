@@ -67,7 +67,7 @@
 \typeout{Use Packages}
 \RequirePackage{xkeyval}
 \RequirePackage{calc}
-%\RequirePackage[cmyk]{xcolor}
+\RequirePackage[cmyk]{xcolor}
 \RequirePackage{tikz}
 \RequirePackage{pgf}
 \RequirePackage{ifthen}
@@ -386,7 +386,7 @@
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% IMISE Additions
-\definecolor{mediblue}{RGB}{0,138,201}
+\definecolor{mediblue}{cmyk}{1,0,0,0.3}
 \definecolor{medigray}{RGB}{157,157,157}
 \definecolor{medidarkgray}{RGB}{71,80,84}
 \definecolor{mixblue}{RGB}{0,167,214}

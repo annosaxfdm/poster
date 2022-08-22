@@ -1,4 +1,4 @@
-\PassOptionsToPackage{table}{xcolor}
+% Use custom color mediblue CMYK 1,0,0,0.3 for all blue elements. In RGB it is around 0,50,70 (0..100) or 0,126,178 (0..255).
 \documentclass[portrait,final,a0paper,fontscale=0.320]{imiseposter}
 \usepackage[T1]{fontenc}
 \usepackage[utf8]{inputenc}
@@ -29,11 +29,12 @@
 \begin{poster}% Set grid to false for final print
   {grid=true,}
   % Eye Catcher
-  {\includegraphics[height=4.5cm]{img/medfak.pdf}} 
+  {\hspace{5em}\includegraphics[height=0.105\textheight]{img/anno-logo-short-mediblue.pdf}}
   % Title
-  {This title may span one or multiple lines}
+  {Anthropological Notation Ontology}
   % Authors
-  {First Author{\small <first.author@imise.uni-leipzig.de>}, Another Author, Another Author}
+  {Alexandr Uciteli, Andy Ludwig, Prof. Dirk Labudde, Konrad Höffner, Marleen Mohaupt}
+  %{Alexandr Uciteli, Konrad Höffner{\small <konrad.hoeffner@imise.uni-leipzig.de>}, Andy Ludwig, other Author, Another Author}
   % University logo
   {% The makebox allows the title to flow into the logo, this is a hack because of the L shaped logo.
     %\includegraphics[height=9.0em]{img/medfak.pdf}
@@ -71,15 +72,16 @@ Some text~\cite{bb} and some more text~\cite{ob} and even more text~\cite{he}.
     \vspace{0.3em}
     Myproject is supported under the DFG grant numbers 1234/5-6 and 6543/2-1.
   \end{posterbox}
-%%%%%%%%%%%%%%% Anno Logo
- \node [anchor=south east, inner sep=1pt,xshift=-27em] at (current page.south east)
- {\includegraphics[height=0.03\textheight]{img/anno-logo.pdf}
- };
+%%%%%%%%%%%%%%% Medical Faculty Logo
+ \node [anchor=south east, inner sep=1pt,xshift=-15em,yshift=-2em] at (current page.south east)
+ {\includegraphics[height=4.5cm,decodearray=0 0 0 0 0 1]{img/medfak.pdf}};
+%%%%%%%%%%%%%%% Hochschule Mittweida
+ \node [anchor=south east, inner sep=1pt,xshift=-17em,yshift=10em] at (current page.south east)
+ {\includegraphics[height=2.5cm]{img/mittweida-logo-mediblue.pdf}};
 %%%%%%%%%%%%%%% IMISE Logo
- \node [anchor=south east, inner sep=1pt,xshift=-10em] at (current page.south east)
- {\includegraphics[height=0.03\textheight]{img/imise-logo.pdf}
- };
-%%%%%%%%%%%%%%% DFG Logo, remove or replace if your project is funded by a different organization 
+ \node [anchor=south east, inner sep=1pt,xshift=-10em,yshift=2em] at (current page.south east)
+ {\includegraphics[height=0.024\textheight]{img/imise-logo.pdf}};
+%%%%%%%%%%%%%%%  Founded by SaxFDM, their guidelines say to use the Saxony signet
  \node [anchor=south east, inner sep=1pt,xshift=-3.5em] at (current page.south east) % for unknown reasons the xshift is necessary
  %{\includegraphics[height=0.03\textheight]{img/dfg-logo.pdf}
  {\includegraphics[height=0.08\textheight]{img/sachsen-signet.pdf}
