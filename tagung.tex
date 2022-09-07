@@ -46,8 +46,12 @@ Some text~\cite{bb} and some more text~\cite{ob} and even more text~\cite{he}.
 \blindtext
 \end{posterbox}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{posterbox}[name=methods,below=background]{Methods}
-\Blindtext
+\begin{posterbox}[name=ontology,below=background]{Ontology}
+\includegraphics[width=\textwidth]{img/anno.pdf}
+\end{posterbox}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{posterbox}[name=ols,below=ontology]{OLS}
+\includegraphics[width=\textwidth]{img/ols.png}
 \end{posterbox}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{posterbox}[name=results,column=1]{Results}
@@ -58,7 +62,7 @@ Some text~\cite{bb} and some more text~\cite{ob} and even more text~\cite{he}.
 \blindtext
 \end{posterbox}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{posterbox}[name=references,column=0,below=methods]{References}
+\begin{posterbox}[name=references,column=0,below=ols]{References}
     \small
     \begingroup
     \renewcommand{\section}[2]{}%suppress heading
