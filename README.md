@@ -1,30 +1,19 @@
-# IMISE LaTeX poster template
-Poster in A0 format.
-Design based on the LaTeX [baposter](https://github.com/mloesch/baposter) class and one of its [examples](https://github.com/mloesch/baposter/tree/master/examples/graphtrack).
-
-## Setup
-Fork this repository into your own GitHub account or [download](https://github.com/IMISE/imise-poster/archive/refs/heads/master.zip) and extract it.
-In any case, I recommend you to put your poster into version control.
+# Anno LaTeX posters and template
+Posters in A0 format.
+Based on <https://github.com/IMISE/imise-poster>.
+Use template.tex as a starting point.
+tagung.tex is the poster for the 3rd SaxFDM Tagung in Leipzig on 2022-09-03.
 
 ## Online Editor
 If you are a LaTeX beginner or just prefer working in a web editor, you can copy and edit this template on [Overleaf](https://www.overleaf.com/read/bxbbygxjhpdx).
 
-## Develop
-* If your poster is in German language, change `\usepackage[english]{babel}` to `\usepackage[ngerman]{babel}` in `poster.tex`
-* Add text to `poster.tex`
-* Add images to the `img` folder
-* Add literature to `poster.bib`
-
 ## Compile
 Compile the LaTeX file to PDF:
 
-    pdflatex poster.tex
-    bibtex poster
-    pdflatex poster.tex
+    pdflatex myposter.tex
+    bibtex myposter
+    pdflatex myposter.tex
 
-If you don't have any literature references, `pdflatex poster.tex` is enough.
-If you have `latexmk` installed, you can do it in one command using `latexmk -pdf poster.tex` or under Linux just execute the `compile` script.
-
-## Feedback
-If you encounter bugs or have a proposal to improve the template, please [create an issue](https://github.com/IMISE/imise-poster/issues/new).
+If you don't have any literature references, `pdflatex myposter.tex` is enough.
+If you have `latexmk` installed, you can do it in one command using `latexmk -pdf myposter.tex` or under Linux just execute the `compile` script.
 
