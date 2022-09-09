@@ -12,8 +12,7 @@
 %*********************************************************************************************************
 \usepackage{graphicx}
 \usepackage{url}% do not use hyperref as its links are displaced with baposter because of the font scale 
-
-\usepackage{blindtext}% remove for production
+\usepackage{booktabs}
 
 % Select Font %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %\usepackage{helvet} % closest to arial
@@ -24,6 +23,15 @@
 \newcommand{\captionfont}{\footnotesize}
 \usepackage[font=small,labelfont=bf]{caption}
 
+\usepackage{tcolorbox}
+\newtcolorbox{subsectionbox}[1]
+{
+  colframe=white,
+  colback=white,
+  colbacktitle=mediblue,
+  sharp corners=all,
+  title    = {#1},
+}
 \begin{document}
 
 \begin{poster}% Set grid to false for final print
@@ -33,7 +41,7 @@
   % Title
   {Anthropological Notation Ontology}
   % Authors
-  {Alexandr Uciteli, Andy Ludwig, Prof. Dirk Labudde\\Konrad Höffner, Marleen Mohaupt}
+  {Alexandr Uciteli, Andy Ludwig, Prof. Dirk Labudde\\Konrad Höffner, Marie Heuschkel, Marleen Mohaupt}
   %{Alexandr Uciteli, Konrad Höffner{\small <konrad.hoeffner@imise.uni-leipzig.de>}, Andy Ludwig, other Author, Another Author}
   % University logo
   {% The makebox allows the title to flow into the logo, this is a hack because of the L shaped logo.
@@ -41,40 +49,58 @@
   }
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{posterbox}[name=background,column=0,row=0]{Background}
-Some text~\cite{bb} and some more text~\cite{ob} and even more text~\cite{he}.
-\blindtext
+\begin{posterbox}[name=background,column=0,row=0]{Hintergrund}
+Ziel ist die Entwicklung einer Ontologie für die einheitliche Einordnung der Knochenfunde aus den Ausgrabungen in das Skelettsystem, die Beschreibung der Skelettstücke sowie die Definition von Funktionen zur Ableitung verschiedener Phänotypen des Menschen. 
 \end{posterbox}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{posterbox}[name=ontology,below=background]{Ontology}
+\begin{posterbox}[name=ontology,below=background]{Ontologie}
 \includegraphics[width=\textwidth]{img/anno.pdf}
-\end{posterbox}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{posterbox}[name=ols,below=ontology]{OLS}
+\begin{tabular}{ll}
+\toprule
+\textbf{Modul}			&\textbf{Inhalt}\\
+\midrule
+bones					&Knochen\\
+dentes					&Zähne\\
+anatomical locations	&Lage- und Richtungsbezeichnungen\\
+osteological terms		&Begriffe zur Beschreibung des Skelettsystems\\
+osteometric landmarks	&vordefinierte Punkte auf Skelettelementen\\
+anatomical landmarks	&anatomische Punkte und Strukturen\\
+\bottomrule
+\end{tabular}
+
+\begin{subsectionbox}{OLS~~~~~\small\url{https://ols.imise.uni-leipzig.de/ontologies/anno}}
+Die Ontologie wird in einem OLS-Terminologieserver~\cite{ols} verwaltet und synchronisiert sich mit den OLS-Instanzen der Nationalen Forschungsdateninfrastruktur (NFDI).
 \includegraphics[width=\textwidth]{img/ols.png}
+\end{subsectionbox}
+
 \end{posterbox}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{posterbox}[name=results,column=1]{Results}
-\Blindtext
+\begin{posterbox}[name=results,column=1]{Mittweida}
+Dieser Text ist ein Platzhalter für die Inhalte aus Mittweida
+\begin{itemize}
+\item Übertragung anthropologischer Untersuchungen in den digitalen Raum~\cite{digitalisierung}
+\item Vorteile wie Sammlungsverknüpfung~\cite{spurensuche} und Standortunabhängigkeit, Materialerhalt 
+\item Ontologie als Basis (Start mit Festlegung einer einheitlichen anatomischen Landkarte, Möglichkeit der Automatisierung bei Messungen, dadurch Möglichkeit mehr Messungen / Daten aufzunehmen) für Digitale Speicherung und Verknüpfung anthropologischer Informationen 
+Ermöglicht weitergehende Analysen und Untersuchungsprozesse 
+\end{itemize}
+
 \end{posterbox}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{posterbox}[name=discussion,column=1,below=results]{Discussion}
-\blindtext
-\end{posterbox}
+%\begin{posterbox}[name=discussion,column=1,below=results]{Discussion}
+%\end{posterbox}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{posterbox}[name=references,column=0,below=ols]{References}
+\begin{posterbox}[name=references,column=0,below=ontology]{References}
     \small
     \begingroup
     \renewcommand{\section}[2]{}%suppress heading
     % using bibtex ***********
-    \bibliographystyle{abbrv}
+    \bibliographystyle{abbrvdin}
     \bibliography{anno}
     % using biblatex *********
     %\printbibliography
     %*************************
     \endgroup
     \vspace{0.3em}
-    Myproject is supported under the DFG grant numbers 1234/5-6 and 6543/2-1.
   \end{posterbox}
 %%%%%%%%%%%%%%% Anno Logo
  \node [anchor=south east, inner sep=1pt,xshift=14em,yshift=-14em] at (current page.north west)
