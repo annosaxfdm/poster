@@ -41,7 +41,7 @@
   % Title
   {Anthropological Notation Ontology}
   % Authors
-  {Konrad Höffner, Andy Ludwig, Marie Heuschkel\\Marleen Mohaupt, Prof. Dirk Labudde, Alexandr Uciteli}
+  {Konrad Höffner, Andy Ludwig, Marie Heuschkel\\Marleen Mohaupt, Dirk Labudde, Alexandr Uciteli}
   %{Alexandr Uciteli, Konrad Höffner{\small <konrad.hoeffner@imise.uni-leipzig.de>}, Andy Ludwig, other Author, Another Author}
   % University logo
   {% The makebox allows the title to flow into the logo, this is a hack because of the L shaped logo.
@@ -50,7 +50,7 @@
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{posterbox}[name=background,column=0,row=0]{Hintergrund}
-Ziel ist die Entwicklung einer Ontologie für die einheitliche Einordnung von Knochenfunden aus Ausgrabungen in das Skelettsystem, die Beschreibung der Skelettstücke sowie die Definition von Funktionen zur Ableitung verschiedener Phänotypen des Menschen. 
+Ziel des SaxFDM-Projektes ist die Entwicklung einer Ontologie für die einheitliche Einordnung von Knochenfunden aus Ausgrabungen in das Skelettsystem, die Beschreibung der Skelettstücke sowie die Definition von Funktionen zur Ableitung verschiedener Phänotypen des Menschen. 
 \end{posterbox}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{posterbox}[name=ontology,below=background]{Ontologie}
@@ -98,7 +98,6 @@ dieses bild kommt noch nach links\\
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{posterbox}[name=references,column=0,below=ontology]{References}
     \small
-Diese Maßnahme wird mitfinanziert mit Steuermitteln auf Grundlage des vom Sächsischen Landtag beschlossenene Haushaltes.
 \begingroup
     \renewcommand{\section}[2]{}%suppress heading
     % using bibtex ***********
@@ -109,7 +108,10 @@ Diese Maßnahme wird mitfinanziert mit Steuermitteln auf Grundlage des vom Säch
     %*************************
     \endgroup
     \vspace{0.3em}
-  \end{posterbox}
+\begin{tabular}{p{33em}l}
+\vspace{-2em}Diese Maßnahme wird mitfinanziert mit Steuermitteln auf Grundlage des vom Sächsischen Landtag beschlossenen Haushaltes.	&\includegraphics[height=0.04\textheight]{img/sachsen-signet.pdf}\\
+\end{tabular}
+\end{posterbox}
 %%%%%%%%%%%%%%% Anno Logo
  \node [anchor=south east, inner sep=1pt,xshift=14em,yshift=-14em] at (current page.north west)
  {\includegraphics[height=0.105\textheight]{img/anno-logo-short-mediblue.pdf}};
