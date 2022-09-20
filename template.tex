@@ -2,7 +2,7 @@
 \documentclass[portrait,final,a0paper,fontscale=0.320]{imiseposter}
 \usepackage[T1]{fontenc}
 \usepackage[utf8]{inputenc}
-\usepackage[english]{babel}% change to ngerman for a German poster
+\usepackage[ngerman]{babel}% change to ngerman for a German poster
 \microtypecontext{spacing=nonfrench}
 % Using biblatex and biber. It's more modern but takes more than twice as long to compile in my case. ****
 % If you use biblatex, you need to comment and uncomment the marked statements in the references as well.
@@ -33,7 +33,7 @@
   % Title
   {Anthropological Notation Ontology}
   % Authors
-  {Alexandr Uciteli, Andy Ludwig, Prof. Dirk Labudde\\Konrad Höffner, Marleen Mohaupt}
+  {Konrad Höffner, Andy Ludwig, Marie Heuschkel\\Marleen Mohaupt, Dirk Labudde, Alexandr Uciteli}
   %{Alexandr Uciteli, Konrad Höffner{\small <konrad.hoeffner@imise.uni-leipzig.de>}, Andy Ludwig, other Author, Another Author}
   % University logo
   {% The makebox allows the title to flow into the logo, this is a hack because of the L shaped logo.
@@ -41,37 +41,39 @@
   }
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{posterbox}[name=background,column=0,row=0]{Background}
+\begin{posterbox}[name=background,column=0,row=0]{Hintergrund}
 Some text~\cite{bb} and some more text~\cite{ob} and even more text~\cite{he}.
 \blindtext
 \end{posterbox}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{posterbox}[name=methods,below=background]{Methods}
-\Blindtext
-\end{posterbox}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{posterbox}[name=results,column=1]{Results}
-\Blindtext
-\end{posterbox}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{posterbox}[name=discussion,column=1,below=results]{Discussion}
+\begin{posterbox}[name=methods,below=background]{Methoden}
 \blindtext
 \end{posterbox}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{posterbox}[name=references,column=0,below=methods]{References}
+\begin{posterbox}[name=results,column=1]{Ergebnisse}
+\blindtext
+\end{posterbox}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{posterbox}[name=discussion,column=1,below=results]{Diskussion}
+\blindtext
+\end{posterbox}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{posterbox}[name=references,column=0,below=methods]{Literaturangaben}
     \small
-    \begingroup
+\begingroup
     \renewcommand{\section}[2]{}%suppress heading
     % using bibtex ***********
-    \bibliographystyle{abbrv}
+    \bibliographystyle{abbrvdin}
     \bibliography{anno}
     % using biblatex *********
     %\printbibliography
     %*************************
     \endgroup
     \vspace{0.3em}
-    Myproject is supported under the DFG grant numbers 1234/5-6 and 6543/2-1.
-  \end{posterbox}
+\begin{tabular}{p{33em}l}
+\vspace{-3em}Diese Maßnahme wird mitfinanziert mit Steuermitteln auf Grundlage des vom Sächsischen Landtag beschlossenen Haushaltes.	&\vspace{-1em}\includegraphics[height=0.03\textheight]{img/sachsen-signet.pdf}\\
+\end{tabular}
+\end{posterbox}
 %%%%%%%%%%%%%%% Anno Logo
  \node [anchor=south east, inner sep=1pt,xshift=14em,yshift=-14em] at (current page.north west)
  {\includegraphics[height=0.105\textheight]{img/anno-logo-short-mediblue.pdf}};
@@ -81,8 +83,8 @@ Some text~\cite{bb} and some more text~\cite{ob} and even more text~\cite{he}.
  %{\includegraphics[height=0.03\textheight]{img/dfg-logo.pdf}
  {\includegraphics[height=0.08\textheight]{img/sachsen-signet.pdf}};
 %%%%%%%%%%%%%%% Medical Faculty Logo
- \node [anchor=south east, inner sep=1pt,xshift=-17em,yshift=-2em] at (current page.south east)
- {\includegraphics[height=4cm,decodearray=0 0 0 0 0 1]{img/medfak.pdf}};
+ \node [anchor=south east, inner sep=1pt,xshift=-19.5em,yshift=-1.5em] at (current page.south east)
+ {\includegraphics[height=3.3cm,decodearray=0 0 0 0 0 1]{img/medfak.pdf}};
 %%%%%%%%%%%%%%% Hochschule Mittweida
  \node [anchor=south east, inner sep=1pt,xshift=-19em,yshift=8em] at (current page.south east)
  {\includegraphics[height=2.2cm]{img/mittweida-logo-mediblue.pdf}};
@@ -90,7 +92,7 @@ Some text~\cite{bb} and some more text~\cite{ob} and even more text~\cite{he}.
  \node [anchor=south east, inner sep=1pt,xshift=-3.5em,yshift=7.9em] at (current page.south east)
  {\includegraphics[height=2.2cm]{img/fosil-logo.png}};
 %%%%%%%%%%%%%%% IMISE Logo
- \node [anchor=south east, inner sep=1pt,xshift=-3em,yshift=2em] at (current page.south east)
+ \node [anchor=south east, inner sep=1pt,xshift=-3em,yshift=1em] at (current page.south east)
  {\includegraphics[height=1.5cm]{img/imise-logo.pdf}};
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \end{poster}
